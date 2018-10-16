@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :products
+  resources :produts
   get 'simple_pages/about'
   get 'simple_pages/contact'
   root 'simple_pages#index'
