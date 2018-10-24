@@ -1,5 +1,5 @@
-<h2>Featured Product:</h2>
-<%= @featured_product.name %>
+<h2>Featured products</h2>
+
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -14,7 +14,8 @@
       <%= image_tag(product.image_url) %>
 
       <div class="carousel-caption d-none d-md-block">
-        <%= product.name %>
+        <h5><%= product.name %></h5>
+        <p><%= product.description %></p>
       </div>
     </div>
     <% end %>
