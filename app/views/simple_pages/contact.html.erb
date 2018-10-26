@@ -2,4 +2,26 @@
   <h1>Contact Information</h1>
   <p>Email: astass3000@live.com</p>
   <p>Phone: 952-594-9310</p>
+
+  <h2>Contact Us</h2>
+
+  <%= flash[:notice] %>
+
+  <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+
+  <div class="form-group mx-sm-3">
+    <%=form.label :name %>
+    <%= form.text_field :name, class: "form-control mx-sm-3", placeholder: "Enter Name", required: true %>
+  </div>
+  <div class="form-group mx-sm-3">
+    <%= form.label :email %>
+    <%=form.text_field :email, class: "form-control mx-sm-3", placeholder: "Enter Email", required: true %>
+  </div>
+  <div class="form-group mx-sm-3">
+    <%= form.label :message %>
+    <%= form.text_area :message, class: "form-control mx-sm-3", placeholder: "Enter Message", rows: 5 %>
+  </div>
+
+  <%= form.submit "Send", class: "form_label btn btn-primary" %>
+  <% end %>
 </div>
