@@ -11,32 +11,32 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group mx-sm-3 mb-2">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group mx-sm-3 mb-2">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group mx-sm-3 mb-2">
     <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
+    <%= form.text_field :image_url, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :colour %><br>
-    <%= form.text_field :colour %>
+  <div class="form-group mx-sm-3 mb-2">
+    <%= form.label :colour %>
+    <%= form.text_field :colour, class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :price %><br>
-    <%= form.text_field :price %>
+  <div class="form-group mx-sm-3 mb-2">
+    <%= form.label :price %>
+    <%= form.text_field :price, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary my-2 my-sm-0" %>
   </div>
 <% end %>

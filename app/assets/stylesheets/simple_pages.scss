@@ -7,35 +7,6 @@ body {
   margin: 0;
 }
 
-nav {
-  border: none;
-  padding: 8px;
-  background-color: #000;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-nav li {
-  float: left;
-  display: block;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-nav a {
-  color: #fff;
-}
-
-nav a:visited {
-  color: #fff;
-}
-
 .container-fluid p {
   font-size: 1.25rem;
 }
@@ -49,7 +20,7 @@ h1, h2 {
 
 footer {
   text-align: center;
-  background-color: #000;
+  background-color: #343a40;
   color: #fff;
   position: fixed;
   bottom: 0;
