@@ -1,6 +1,8 @@
-<div class="col-sm">
-  <%= image_tag(product.image_url, class: "img-fluid") %>
-  <a href="#"><h1><%= product.name %></h1></a>
-  <p><%= product.description %></p>
-  <strong>$<%= product.price %></strong>
+<div class="col-sm card" style="width: 18rem;">
+  <%= image_tag(product.image_url, class: "img-fluid card-img-top") %>
+  <div class="card-body"?
+    <a href="#"><h1 class="card-title"><%= product.name %></h1></a>
+    <p class="card-text"><%= product.description %></p>
+    <strong class="card-text">$<%= '%.2f' % product.price %></strong>
+  </div>
 </div>
