@@ -1,4 +1,4 @@
-$(document).on("turbolinks:load", function(){
+$(document).on("turbolinks:load", function() {
   $(".rating").raty({
     starHalf: "<%= asset_path "star-half.png" %>",
     starOff: "<%= asset_path "star-off.png" %>",
@@ -7,7 +7,7 @@ $(document).on("turbolinks:load", function(){
   });
 
   $(".rated").raty({
-    starHalf: "<% asset_path "star-half.png" %>",
+    starHalf: "<%= asset_path "star-half.png" %>",
     starOff: "<%= asset_path "star-off.png" %>",
     starOn: "<%= asset_path "star-on.png" %>",
     readOnly: true,
