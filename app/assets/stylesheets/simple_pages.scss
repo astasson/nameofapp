@@ -24,7 +24,7 @@ footer {
   color: #fff;
   position: fixed;
   bottom: 0;
-  width: 100%
+  width: 100%;
 }
 
 .carousel-item img {
@@ -55,4 +55,8 @@ footer {
 
 .rated {
   margin-bottom: 20px;
+}
+
+#error_explanation li {
+  color: #000;
 }

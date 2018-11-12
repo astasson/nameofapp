@@ -25,6 +25,11 @@
 
 <%= render 'new_comment' %>
 <%= render 'comments' %>
-
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @comments %>
+  </div>
+  <%= will_paginate @comments, :container => false %>
+</div>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
