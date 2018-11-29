@@ -1,11 +1,13 @@
 require 'rails_helper'
 
 describe OrdersController, type: :controller do
-  let(:user) { User.create!(email: "tim@gmail.com", password: "vroom34") }
+  before do
+    @user = FactoryBot.create(:user)
+  end
 
   describe 'GET #index' do
     before do
-      sign_in user
+      sign_in @user
     end
 
     it 'displays index of all orders' do

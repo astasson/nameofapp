@@ -1,12 +1,14 @@
 require 'rails_helper'
 
 describe CommentsController, type: :controller do
-  let(:user) { User.create!(email: "tim@gmail.com", password: "vroom34") }
+  before do
+    @user = FactoryBot.create(:user)
+  end
   let(:product) { Product.create!(name: "Table")}
 
   describe 'POST #create' do
     before do
-      sign_in user
+      sign_in @user
     end
 
     it 'creates new comment' do
