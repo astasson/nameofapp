@@ -3,6 +3,6 @@
   <div class="card-body"?
     <a href="#"><h1 class="card-title"><%= product.name %></h1></a>
     <p class="card-text"><%= product.description %></p>
-    <strong class="card-text">$<%= '%.2f' % product.price %></strong>
+    <strong class="card-text">$<%= '%.2f' % (product.prices/100) %></strong>
   </div>
 </div>
