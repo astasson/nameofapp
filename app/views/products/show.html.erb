@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<% cache @product do %>
 <%= image_tag(@product.image_url, width: "800", class: "img-fluid img-zoom", data_image_zoom: @product.image_url) %>
 <p>
   <strong>Name:</strong>
@@ -37,3 +38,4 @@
 </div>
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
+<% end %>
