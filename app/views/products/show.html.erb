@@ -1,29 +1,31 @@
 <p id="notice"><%= notice %></p>
 
 <% cache @product do %>
-<%= image_tag(@product.image_url, width: "800", class: "img-fluid img-zoom", data_image_zoom: @product.image_url) %>
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div data-product-id="<%= @product.id %>">
+  <%= image_tag(@product.image_url, width: "800", class: "img-fluid img-zoom", data_image_zoom: @product.image_url) %>
+  <p>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+  <p>
+    <strong>Colour:</strong>
+    <%= @product.colour %>
+  </p>
 
-<p>
-  <strong>Price: </strong>$
-  <%= '%.2f' % (@product.prices/100) %>
-</p>
-
+  <p>
+    <strong>Price: </strong>$
+    <%= '%.2f' % (@product.prices/100) %>
+  </p>
+</div>
 <%= form_with(url: '/payments/create') do |form| %>
   <%= render partial: "shared/stripe_checkout_button" %>
+  <%= hidden_field_tag(:product_id, @product.id) %>
 <% end %>
 
 <p>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></p>
