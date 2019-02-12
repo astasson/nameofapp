@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
- .col-sm {
-   text-align: center;
-   margin: 20px;
+.col-sm {
+  text-align: center;
+  margin: 20px;
  }
 
 .card-img-top {
@@ -13,4 +13,8 @@
 
 .card-body {
   color: #000;
+}
+
+.container-fluid {
+  margin: 20px;
 }

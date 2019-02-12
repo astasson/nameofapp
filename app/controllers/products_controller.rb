@@ -4,7 +4,6 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
@@ -16,7 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+    @comments = @product.comments.order("created_at DESC").page(params[:page]).per_page(5)
   end
 
   # GET /products/new
@@ -35,7 +34,7 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        format.html { redirect_to "/simple_pages/about", notice: 'Product was successfully created.' }
+        format.html { redirect_to "/simple_pages/products", notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }

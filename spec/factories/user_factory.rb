@@ -3,18 +3,18 @@ FactoryBot.define do
 
   factory :user, class: User do
     email
-    password "password"
-    first_name "Bob"
-    last_name "Ross"
+    password { "password" }
+    first_name { "Bob" }
+    last_name { "Ross" }
     admin false
   end
 
   factory :admin, class: User do
     email
-    password "boom"
+    password { "boom" }
     admin true
-    first_name "Paul"
-    last_name "Bunyan" 
+    first_name { "Paul" }
+    last_name {"Bunyan"} 
 
   end
 end

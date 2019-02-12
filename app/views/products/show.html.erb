@@ -2,7 +2,8 @@
 
 <% cache @product do %>
 <div data-product-id="<%= @product.id %>">
-  <%= image_tag(@product.image_url, width: "800", class: "img-fluid img-zoom", data_image_zoom: @product.image_url) %>
+  <%= image_tag(@product.image_url, width: "800", class: "img-fluid img-zoom", data_image_zoom: "../../assets/images/pizza_big.jpeg",
+    zoomType: "window", zoomWindowWidth: "100", zoomWindowHeight: "100") %>
   <p>
     <strong>Name:</strong>
     <%= @product.name %>
@@ -33,12 +34,14 @@
 <%= render 'new_comment' %>
 
 <%= render 'comments' %>
-<div class="digg_pagination">
-  <div class="page_info">
+
+<div>
+  <div>
     <%= page_entries_info @comments %>
   </div>
   <%= will_paginate @comments, :container => false %>
 </div>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 <% end %>
