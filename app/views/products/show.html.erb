@@ -2,8 +2,8 @@
 
 <% cache @product do %>
 <div data-product-id="<%= @product.id %>">
-  <%= image_tag(@product.image_url, width: "800", class: "img-fluid img-zoom", data_image_zoom: "../../assets/images/pizza_big.jpeg",
-    zoomType: "window", zoomWindowWidth: "100", zoomWindowHeight: "100") %>
+  <%= image_tag(@product.image_url, width: "800", class: "img-fluid img-zoom",
+    zoomType: "window", zoomWindowWidth: "500", zoomWindowHeight: "500") %>
   <p>
     <strong>Name:</strong>
     <%= @product.name %>
